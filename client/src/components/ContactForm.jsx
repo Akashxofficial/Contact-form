@@ -116,6 +116,7 @@ export default function ContactForm({ onSubmitted }) {
       const digitsOnly = value
         .replace(/\D/g, "")
         .slice(0, countryMeta.digitLength);
+
       setForm((prev) => ({ ...prev, phone: digitsOnly }));
     } else {
       setForm((prev) => ({
