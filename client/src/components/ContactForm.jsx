@@ -22,7 +22,7 @@ const INITIAL_STATE = {
   desiredHousingStyle: "2/3 BHK",
   timeline: "1-3 Months",
   budgetRange: "₹50 Lakhs-₹1 Crore",
-  referralSource: "Company website / social media / online search",
+  referralSource: "Company Website",
   channelPartnerName: "",
   empId: "",
   referralDetails: "",

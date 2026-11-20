@@ -153,7 +153,9 @@ export const REFERRAL_SOURCES = [
   "Channel Partner",
   "Employee Referral",
   "Referral from friend/family/ Existing Customer",
-  "Company website / social media / online search",
+  "Company Website",
+  "Social Media",
+  "Online Search",
   "Real estate portal (e.g., Magic Bricks, 99acres)",
   "Other",
 ];

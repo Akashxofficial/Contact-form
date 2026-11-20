@@ -71,7 +71,7 @@ export const createInquirySchema = z.object({
   referralSource: z
     .enum(REFERRAL_SOURCES)
     .optional()
-    .default("Company website / social media / online search"),
+    .default("Company Website"),
   channelPartnerName: z.string().trim().max(120).optional().default(""),
   empId: z.string().trim().max(60).optional().default(""),
   referralDetails: z.string().trim().max(200).optional().default(""),

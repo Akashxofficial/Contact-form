@@ -155,7 +155,9 @@ export const REFERRAL_SOURCES = [
   "Channel Partner",
   "Employee Referral",
   "Referral from friend/family/ Existing Customer",
-  "Company website / social media / online search",
+  "Company Website",
+  "Social Media",
+  "Online Search",
   "Real estate portal (e.g., Magic Bricks, 99acres)",
   "Other",
 ];
@@ -293,7 +295,7 @@ const contactInquirySchema = new mongoose.Schema(
     referralSource: {
       type: String,
       enum: REFERRAL_SOURCES,
-      default: "Company website / social media / online search",
+      default: "Company Website",
     },
     channelPartnerName: { type: String, trim: true, maxlength: 120, default: "" },
     empId: { type: String, trim: true, maxlength: 60, default: "" },
