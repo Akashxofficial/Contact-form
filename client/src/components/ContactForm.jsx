@@ -43,12 +43,6 @@ function getCountryMeta(countryName) {
   );
 }
 
-function isoToFlagEmoji(iso) {
-  return iso
-    .toUpperCase()
-    .replace(/./g, (char) => String.fromCodePoint(127397 + char.charCodeAt(0)));
-}
-
 function validateForm(values) {
   const errors = {};
   const countryMeta = getCountryMeta(values.country);
@@ -275,7 +269,7 @@ export default function ContactForm({ onSubmitted }) {
             >
               {COUNTRIES.map((c) => (
                 <option key={c.iso} value={c.name}>
-                  {isoToFlagEmoji(c.iso)} {c.name} ({c.code})
+                  {c.name} ({c.code})
                 </option>
               ))}
             </select>
