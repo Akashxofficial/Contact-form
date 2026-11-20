@@ -41,9 +41,14 @@ export function createApp() {
   app.use(
     cors({
       origin(origin, callback) {
+        const vercelOrigin = process.env.VERCEL_URL
+          ? `https://${process.env.VERCEL_URL}`
+          : null;
         if (
           !origin ||
           allowedOrigins.includes(origin) ||
+          (vercelOrigin && origin === vercelOrigin) ||
+          /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin) ||
           (process.env.NODE_ENV !== "production" &&
             /^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/i.test(origin))
         ) {
